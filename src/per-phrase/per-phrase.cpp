@@ -27,7 +27,8 @@ Additional commands:
     while (true)
     {
         // Get user input.
-        read_input(">", literal);
+        echo_inline(">");
+        std::getline(std::cin, literal);
 
         if (literal == "echo")
         { // Toggle echo if command given.

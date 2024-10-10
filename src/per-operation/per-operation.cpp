@@ -31,7 +31,8 @@ To exit the interpreter enter [x].
         // Echo current state.
         echo(std::format("Result: {}\tClipboard: {}", result, clipboard));
         // Parse user input.
-        read_input(">", operation);
+        echo_inline(">");
+        std::getline(std::cin, operation);
 
         // Translate the operation into usable format.
         auto oper = interpret_operation(operation, clipboard);
