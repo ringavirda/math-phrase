@@ -22,7 +22,7 @@ Additional commands:
     // Top level container for the next command or phrase literal.
     std::string literal;
     // Toggles analysis output.
-    bool enable_echo = true;
+    bool enable_echo = false;
 
     while (true)
     {
