@@ -1,10 +1,16 @@
 #include "common.hpp"
 #include "math-interpreter.hpp"
 
-// 10.2 + 33 * (23-3/22.2)
-// 2+4*(2-3/5)+6*2
+/**
+ * This is the entry point file for the math-phrase interpreter.
+ * 
+ * Test phrases:
+ * 2+4*(2-3/5)+6*2
+ * 10.2 + 33 * (23-3/22.2)
+ */
 
-int main() {
+int main()
+{
 
 #ifdef WIN32
   SetConsoleCP(CP_UTF8);
@@ -14,7 +20,8 @@ int main() {
   echo_emphasis("Welcome to math-phrase interpreter!");
 
   int mode = 0;
-  while (true) {
+  while (true)
+  {
     echo(R"""(
 Available operation regimes are as follows:
     [1] - Per-phrase.
@@ -24,7 +31,8 @@ Available operation regimes are as follows:
 )""");
     read_input("Please select mode:", mode);
     std::cin.ignore();
-    switch (mode) {
+    switch (mode)
+    {
     case 1:
       echo_emphasis("Entering per-phrase mode...");
       per_phrase_mode();

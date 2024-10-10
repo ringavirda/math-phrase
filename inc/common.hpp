@@ -13,6 +13,11 @@
 const HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 #endif
 
+/**
+ * General header for echos. Simplifies work with IO by encapsulating most of the
+ * necessary printing functionality into generic functions.
+ */
+
 //
 // Basic echos.
 //

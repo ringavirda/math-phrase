@@ -24,7 +24,7 @@ add_executable(math-int
     src/per-phrase/syntax.cpp
     src/per-phrase/semantic.cpp
     src/per-phrase/echo.cpp
-    src/type-list/meta.cpp
+    src/meta/type-list.cpp
     )
 target_include_directories(math-int PRIVATE inc/ inc/per-phrase)
 

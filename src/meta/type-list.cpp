@@ -2,6 +2,13 @@
 #include <ranges>
 #include <type_traits>
 
+/**
+ * This file contains some examples of metaprogramming. It's a compile-time type
+ * list that with some common functionality. It is a simple demonstration of how
+ * meta can be written in C++. It is unrelated to the interpreter, this file was
+ * added simply because it was left here before.
+ */
+
 // Pure function.
 double add(double arg1, double arg2) { return arg1 + arg2; }
 // Generic function.

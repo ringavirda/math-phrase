@@ -2,6 +2,10 @@
 #include <stdexcept>
 #include <string>
 
+/** 
+ * @brief Exception local for the math-phrase interpreter. Raised when something
+ * goes wrong during different analysis stages.
+ */
 class analysis_failed : std::runtime_error
 {
 private:

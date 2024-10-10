@@ -1,16 +1,14 @@
 #include "common.hpp"
 #include "operation.hpp"
 
-const Operation interpret_operation(std::string &orig,
-                                    const double clip)
+const Operation interpret_operation(const std::string &orig, const double clip)
 {
-    orig.erase(
-        std::remove(orig.begin(), orig.end(), ' '),
-        orig.end());
     Operation oper;
 
     switch (orig[0])
     {
+    case ' ':
+        break;
     case '+':
         oper.type = OperationType::Add;
         break;
@@ -64,9 +62,7 @@ const Operation interpret_operation(std::string &orig,
     return oper;
 }
 
-void execute_operation(const Operation &oper,
-                       double &result,
-                       double &clip)
+void execute_operation(const Operation &oper, double &result, double &clip)
 {
     switch (oper.type)
     {
